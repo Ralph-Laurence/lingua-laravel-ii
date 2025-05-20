@@ -1,0 +1,335 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-dark:        #141C3A;
+    --accent-dark:      #2C1A4E;
+    --accent-primary:   #FF9525;
+    --accent-secondary: #EF5B11;
+    --accent-tertiary:  #F62454;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #616161;
+    background: #C9CFD5;
+  }
+
+  ::selection {
+    color: #616161;
+    background: #C9CFD5;
+  }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Josefin-Sans';
+    src: url('../fonts/JosefinSans.ttf');
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/*============= UTILITY CLASSES ============*/
+.no-resize { resize: none; }
+.text-12 { font-size: 12px; }
+.text-13 { font-size: 13px; }
+.text-14 { font-size: 14px; }
+.text-16 { font-size: 16px; }
+.text-64 { font-size: 64px; }
+.field-no-focus {
+    pointer-events: none;
+    outline: none;
+}
+.bg-readonly { background-color: #e9ecef; }
+
+.msw-justify
+{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.cursor-pointer { cursor: pointer; }
+.rounded-half-rem { border-radius: 0.5rem; }
+.rounded-1rem { border-radius: 1rem; }
+.rounded-2rem { border-radius: 2rem; }
+.z-idx-1 { z-index: 1;}
+.poppins-semibold { font-family: 'Poppins-SemiBold'; }
+.poppins-medium   { font-family: 'Poppins-Medium'; }
+.w-0 { width: 0; }
+.w-15 { width: 15% !important;}
+.opacity-85 { opacity: 0.85; }
+
+
+/*============= OVERRIDDEN CLASSES ============*/
+
+.form-check-input:checked {
+    background-color: #FE9424;
+    border-color: #FE9424;
+}
+.form-check-input:focus {
+    border-color: #fee886;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(253, 169, 13, 0.25);
+}
+
+.was-validated .form-control:valid {
+    border-color: #9A7FB7 !important;
+    box-shadow: 0 0 0 .25rem rgba(44, 26, 78, .25) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235A4095' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.needs-validation .invalid-feedback {
+    font-size: 12px;
+}
+
+/*============= OTHER CLASSES ============*/
+
+footer {
+    /* border-top: 2px solid var(--accent-secondary); */
+    background-color: #110D19;
+    /* background-color: #0D1226; */
+    color: white;
+}
+.w-20px { width: 20px; }
+.h-20px { height: 20px; }
+
+.darker-text {
+    color: #121117;
+}
+
+.sl-button {
+    font-size: 0.8125rem;
+}
+
+.sign-lingua-red-text {
+    color: #FE233A;
+}
+
+.sign-lingua-red-button {
+    background: #FE233A;
+    color: white;
+    border: none 1px solid #e03f3f !important;
+    outline: none !important;
+}
+.sign-lingua-red-button:hover {
+    /* background: #F23B2F; */
+    background: #EF4444;
+}
+
+.sign-lingua-purple-button {
+    background-color: #5A4095 !important;
+    border: 1px solid #493477 !important;
+}
+.sign-lingua-purple-button:hover {
+    background-color: #624CC2 !important;
+    border: 1px solid #493477 !important;
+}
+.sign-lingua-purple-button:disabled {
+    opacity: 0.75;
+}
+
+.sign-lingua-gray-button {
+    background-color: #e7eaec !important;
+    border: 1px solid rgb(175, 177, 180) !important;
+    color: rgb(59, 59, 59) !important;
+}
+
+.sign-lingua-gray-button:hover {
+    background-color: #CED1D3 !important;
+    color: #121117 !important;
+}
+
+.grad-btn-danger
+{
+    background: linear-gradient(to right, #FD6624, #FB473A, #F62155);
+    border: none;
+    border-radius: 20px;
+    height: 44px;
+    min-width: 120px;
+    /* Rounded corners */
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.grad-btn-danger:hover
+{
+    border: 2px solid #FB473A;
+    border-radius: 20px;
+    background: none;
+    color: var(--accent-dark);
+}
+
+.accent-secondary { color: var(--accent-secondary); }
+
+.badge-green {
+    background-color: #DCF1E4;
+    color: #0C622E;
+}
+
+.badge-red {
+    background-color: #FAE4E8;
+    color: #B03D50;
+}
+
+.badge-yellow {
+    background-color: #FBF1DD;
+    color: #896110;
+}
+
+.badge-cyan {
+    background-color: #E5F4F8;
+    color: #3B7E94;
+}
+
+.badge-gray {
+    background-color: #F1F2F3;
+    color: #616161;
+}
+
+.badge-pro {
+    background-color: var(--accent-dark);
+    color: #FFAE3B;
+}
+
+.badge.awareness_badge {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.badge.awareness_badge::before {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle; /* Optional: align the image vertically */
+    margin-right: 4px;
+}
+
+.badge.awareness_badge.badge_mute {
+    background-color: #F6F6FB;
+    color: #2E2A9F;
+}
+
+.badge.awareness_badge.badge_mute::before {
+    background-image: url('../img/awareness_mute_s.png');
+}
+
+.badge.awareness_badge.badge_deaf {
+    background-color: #FEFAF6;
+    color: #FE851F;
+}
+
+.badge.awareness_badge.badge_deaf::before {
+    background-image: url('../img/awareness_deaf_s.png');
+}
+
+.badge.awareness_badge.badge_deafmute {
+    background-color: #F5F9F9;
+    color: #007E7E;
+}
+
+.badge.awareness_badge.badge_deafmute::before {
+    background-image: url('../img/awareness_deafmute_s.png');
+}
+
+.btn.sign-lingua-dropdown-button {
+    background: white !important;
+    border: 1px solid #ced4da !important;
+}
+
+.disability-icon {
+    border-radius: 2rem;
+    width: 24px;
+    height: 24px;
+}
+
+.disability-icon.badge_deafmute {
+    content: url('../img/awareness_deafmute_s.png');
+}
+
+.disability-icon.badge_deaf {
+    content: url('../img/awareness_deaf_s.png');
+}
+
+.disability-icon.badge_mute {
+    content: url('../img/awareness_mute_s.png');
+}
+
+.btn.sign-lingua-dropdown-button:hover,
+.btn.sign-lingua-dropdown-button:active,
+.btn.sign-lingua-dropdown-button:focus {
+    /* border-color: #FDC057 !important;
+    box-shadow: 0 0 0 4px rgba(255, 174, 59, 0.25) !important; */
+    border-color: #86b7fe !important;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25) !important;
+    color: var(--base-dark) !important;
+    background: white !important;
+}
+
+.centered-image
+{
+    object-fit: cover;          /* Scale the image to cover the container */
+    object-position: center;    /* Center the image horizontally and vertically */
+    border: 1px solid #ccc;   /* Optional: add a border to see the image boundaries */
+    display: block;             /* Make sure the image behaves like a block element */
+    margin: 0 auto;             /* Center the image horizontally if needed */
+}
