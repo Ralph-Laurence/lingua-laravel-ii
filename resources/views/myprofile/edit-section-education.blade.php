@@ -96,7 +96,7 @@
             <div class="text-14 text-muted mb-3">You haven't added your educational attainment yet. Click 'Add' to include one.</div>
         @endforelse
 
-        <x-sl-button type="primary" text="Add" icon="fa-plus" id="btn-add-education" />
+        <x-sl-button style="primary" text="Add" icon="fa-plus" id="btn-add-education" />
     </div>
 
     <div class="d-none">

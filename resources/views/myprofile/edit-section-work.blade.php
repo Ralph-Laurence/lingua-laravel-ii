@@ -99,7 +99,7 @@
                 one.</div>
         @endforelse
 
-        <x-sl-button type="primary" text="Add" icon="fa-plus" id="btn-add-workexp" />
+        <x-sl-button style="primary" text="Add" icon="fa-plus" id="btn-add-workexp" />
     </div>
 
     <div class="d-none">
